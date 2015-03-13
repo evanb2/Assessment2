@@ -61,5 +61,20 @@
 
     }
 
+    function testCountMultiple()
+    {
+      //Arrange
+      $test_count_one = new RepeatCounter;
+      $input_keyword = "hi";
+      $input_bank = "hi you hi";
+
+      //Act
+      $result = $test_count_one->countRepeats($input_keyword, $input_bank);
+
+      //Assert
+      $this->assertEquals("hi: 2", $result);
+
+    }
+
   }
 ?>

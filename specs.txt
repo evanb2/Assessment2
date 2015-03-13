@@ -1,25 +1,26 @@
 SPECS
 
-keyword: null, wordbank: null = output: "please input a keyword and a wordbank"
-  this is the simplest input/output combo; null.
+1.  keyword: null, wordbank: null = output: "please input a keyword and a wordbank"
+    this is the simplest input/output combo; null.
 
-keyword: "hi", wordbank: null = output: "please input a keyword and a wordbank"
-  this checks the same function with a keyword input.
+2. keyword: "hi", wordbank: null = output: "please input a keyword and a wordbank"
+   this checks the same function with a keyword input.
 
-keyword: "hi", wordbank: "you" = output: "hi: 0"
-  now we have two inputs but no matching words.
+3. keyword: "hi", wordbank: "you" = output: "hi: 0"
+   now we have two inputs but no matching words.
 
-keyword: "hi", wordbank: "hi" = output: "hi: 1"
-  now we have 1 repeat, checking out repeat counter.
+4. keyword: "hi", wordbank: "hi" = output: "hi: 1"
+   now we have 1 repeat, checking out repeat counter.
+   //I decided to skip this spec because it didn't effect the function
 
-keyword: "hi", wordbank: "hi you" = output: "hi: 1"
-  now we have 1 repeated word, with multiple words in the wordbank.
+5. keyword: "hi", wordbank: "hi you" = output: "hi: 1"
+   now we have 1 repeated word, with multiple words in the wordbank.
 
-keyword: "hi", wordbank: "hi you hi" = output: "hi: 2"
-  now we have 1 repeated word, repeated more than once in the wordbank.
+6. keyword: "hi", wordbank: "hi you hi" = output: "hi: 2"
+   now we have 1 repeated word, repeated more than once in the wordbank.
 
-keyword: "HI", wordbank: "hi you hi" = output: "hi: 2"
-  this is checking for capitalization in the keyword input field.
+7. keyword: "HI", wordbank: "hi you hi" = output: "hi: 2"
+   this is checking for capitalization in the keyword input field.
 
-keyword: "hi", wordbank: "Hi you hi" = output: "hi: 2"
-  this is checking for capitalization in the wordbank input field.
+8. keyword: "hi", wordbank: "Hi you hi" = output: "hi: 2"
+   this is checking for capitalization in the wordbank input field.
