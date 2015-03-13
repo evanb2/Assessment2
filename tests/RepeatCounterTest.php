@@ -94,5 +94,20 @@
       $this->assertEquals("hi: 2", $result);
     }
 
+    function testBankCaps()
+    //Testing for caps in $bank
+    {
+      //Arrange
+      $test_count_one = new RepeatCounter;
+      $input_keyword = "Hi";
+      $input_bank = "Hi you Hi";
+
+      //Act
+      $result = $test_count_one->countRepeats($input_keyword, $input_bank);
+
+      //Assert
+      $this->assertEquals("hi: 2", $result);
+    }
+
   }
 ?>
