@@ -1,1 +1,25 @@
 SPECS
+
+keyword: null, wordbank: null = output: "please input a keyword and a wordbank"
+  this is the simplest input/output combo; null.
+
+keyword: "hi", wordbank: null = output: "please input a keyword and a wordbank"
+  this checks the same function with a keyword input.
+
+keyword: "hi", wordbank: "you" = output: "hi: 0"
+  now we have two inputs but no matching words.
+
+keyword: "hi", wordbank: "hi" = output: "hi: 1"
+  now we have 1 repeat, checking out repeat counter.
+
+keyword: "hi", wordbank: "hi you" = output: "hi: 1"
+  now we have 1 repeated word, with multiple words in the wordbank.
+
+keyword: "hi", wordbank: "hi you hi" = output: "hi: 2"
+  now we have 1 repeated word, repeated more than once in the wordbank.
+
+keyword: "HI", wordbank: "hi you hi" = output: "hi: 2"
+  this is checking for capitalization in the keyword input field.
+
+keyword: "hi", wordbank: "Hi you hi" = output: "hi: 2"
+  this is checking for capitalization in the wordbank input field.
