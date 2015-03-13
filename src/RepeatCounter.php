@@ -12,7 +12,7 @@
       } else {
         //finds $keyword in $bank, adds to $count
         $count = substr_count($bank_lower, $keyword_lower);
-        return $keyword_lower . ": " . $count;
+        return "'".$keyword_lower."'" . " appeared in your wordbank " . $count . " times.";
       }
 
     }
