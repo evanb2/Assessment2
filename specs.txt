@@ -24,3 +24,5 @@ SPECS
 
 8. keyword: "hi", wordbank: "Hi you hi" = output: "hi: 2"
    this is checking for capitalization in the wordbank input field.
+
+9. 

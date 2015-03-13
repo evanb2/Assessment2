@@ -16,7 +16,6 @@
 
       //Assert
       $this->assertEquals("please input a keyword and a wordbank", $result);
-
     }
 
     function testNullBank()
