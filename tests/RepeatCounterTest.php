@@ -31,6 +31,20 @@
       //Assert
       $this->assertEquals("please input a keyword and a wordbank", $result);
     }
-    
+
+    function testNoCount()
+    {
+      //Arrange
+      $test_no_count = new RepeatCounter;
+      $input_keyword = "hi";
+      $input_bank = "you";
+
+      //Act
+      $result = $test_no_count->countRepeats($input_keyword, $input_bank);
+
+      //Assert
+      $this->assertEquals("hi: 0", $result);
+    }
+
   }
 ?>
