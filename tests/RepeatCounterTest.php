@@ -17,5 +17,20 @@
       $this->assertEquals("please input a keyword and a wordbank", $result);
 
     }
+
+    function testNullBank()
+    {
+      //Arrange
+      $test_null_bank = new RepeatCounter;
+      $input_keyword = "hi";
+      $input_bank = null;
+
+      //Act
+      $result = $test_null_bank->countRepeats($input_keyword, $input_bank);
+
+      //Assert
+      $this->assertEquals("please input a keyword and a wordbank", $result);
+    }
+    
   }
 ?>
