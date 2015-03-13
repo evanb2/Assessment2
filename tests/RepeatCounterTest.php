@@ -4,6 +4,7 @@
   class RepeatCounterTest extends PHPUnit_Framework_TestCase
   {
     function testNullInput()
+    //Testing if both inputs are NULL
     {
       //Arrange
       $test_null_input = new RepeatCounter;
@@ -19,6 +20,7 @@
     }
 
     function testNullBank()
+    //Testing if just the $bank input is NULL
     {
       //Arrange
       $test_null_bank = new RepeatCounter;
@@ -33,6 +35,7 @@
     }
 
     function testNoCount()
+    //Testing for a count of 0
     {
       //Arrange
       $test_no_count = new RepeatCounter;
@@ -47,6 +50,7 @@
     }
 
     function testCountOne()
+    //Testing for a count of 1
     {
       //Arrange
       $test_count_one = new RepeatCounter;
@@ -58,10 +62,10 @@
 
       //Assert
       $this->assertEquals("hi: 1", $result);
-
     }
 
     function testCountMultiple()
+    //Testing for count > 1 in $bank
     {
       //Arrange
       $test_count_one = new RepeatCounter;
@@ -73,7 +77,21 @@
 
       //Assert
       $this->assertEquals("hi: 2", $result);
+    }
 
+    function testKeywordCaps()
+    //Testing for caps in $keyword
+    {
+      //Arrange
+      $test_count_one = new RepeatCounter;
+      $input_keyword = "HI";
+      $input_bank = "hi you hi";
+
+      //Act
+      $result = $test_count_one->countRepeats($input_keyword, $input_bank);
+
+      //Assert
+      $this->assertEquals("hi: 2", $result);
     }
 
   }
