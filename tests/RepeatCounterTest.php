@@ -46,5 +46,20 @@
       $this->assertEquals("hi: 0", $result);
     }
 
+    function testCountOne()
+    {
+      //Arrange
+      $test_count_one = new RepeatCounter;
+      $input_keyword = "hi";
+      $input_bank = "hi you";
+
+      //Act
+      $result = $test_count_one->countRepeats($input_keyword, $input_bank);
+
+      //Assert
+      $this->assertEquals("hi: 1", $result);
+
+    }
+
   }
 ?>
