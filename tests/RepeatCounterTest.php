@@ -45,7 +45,7 @@
       $result = $test_no_count->countRepeats($input_keyword, $input_bank);
 
       //Assert
-      $this->assertEquals("hi: 0", $result);
+      $this->assertEquals("'hi' appeared in your wordbank 0 times.", $result);
     }
 
     function testCountOne()
@@ -60,7 +60,7 @@
       $result = $test_count_one->countRepeats($input_keyword, $input_bank);
 
       //Assert
-      $this->assertEquals("hi: 1", $result);
+      $this->assertEquals("'hi' appeared in your wordbank 1 times.", $result);
     }
 
     function testCountMultiple()
@@ -75,7 +75,7 @@
       $result = $test_count_one->countRepeats($input_keyword, $input_bank);
 
       //Assert
-      $this->assertEquals("hi: 2", $result);
+      $this->assertEquals("'hi' appeared in your wordbank 2 times.", $result);
     }
 
     function testKeywordCaps()
@@ -90,7 +90,7 @@
       $result = $test_count_one->countRepeats($input_keyword, $input_bank);
 
       //Assert
-      $this->assertEquals("hi: 2", $result);
+      $this->assertEquals("'hi' appeared in your wordbank 2 times.", $result);
     }
 
     function testBankCaps()
@@ -105,7 +105,7 @@
       $result = $test_count_one->countRepeats($input_keyword, $input_bank);
 
       //Assert
-      $this->assertEquals("hi: 2", $result);
+      $this->assertEquals("'hi' appeared in your wordbank 2 times.", $result);
     }
 
   }
