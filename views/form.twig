@@ -5,8 +5,11 @@
   <title>Repeat Counter!</title>
 </head>
 <body>
-  <div class="container">
-      <h1>Repeat Counter</h1>
+  <div class="container-form">
+      <h1 class="text-center">Repeat Counter</h1>
+      <p class="bg-info">Presenting the Repeat Counter. A revolutionary new web
+          application that lets you count how many times your keyword is used within a given sentence or paragraph.
+      </p>
       <form action="/results">
         <div class="form-group">
           <label for="keyword">Enter your keyword:</label>
@@ -17,7 +20,9 @@
           <input id="bank" name="bank" class="form-control" type="text">
         </div>
 
-        <button type="submit" class="btn-success">Count</button>
+        <div class="count">
+          <button type="submit" class="btn btn-primary btn-lg active">Count</button>
+        </div>
       </form>
   </div>
 </body>
